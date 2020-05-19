@@ -1,0 +1,96 @@
+
+.rocket{
+	animation: rocket-stay-move 2s infinite ease-in-out;
+}
+
+.r1{
+	animation: rocket-tocb 2s 19s ease-in-out forwards;
+}
+
+.cody{
+	animation: rocket-stay-move 2s infinite ease-in-out,
+	move-cody 2s 6s ease-in-out forwards,
+	cody-onboard 2s 17s ease-in-out forwards;
+
+}
+
+.conv1{
+	animation: conversation 2s 8s ease-in-out,
+	rocket-stay-move 2s infinite ease-in-out;
+}
+
+.conv2{
+		animation: conversation 2s 10s ease-in-out,
+		rocket-stay-move 2s infinite ease-in-out;
+}
+
+.conv3{
+	animation: conversation 2s 12s ease-in-out,
+	rocket-stay-move 2s infinite ease-in-out;
+}
+
+.conv4{
+	animation: conversation 2s 14s ease-in-out,
+	rocket-stay-move 2s infinite ease-in-out;
+}
+
+@keyframes rocket-tocb{
+
+	20%{
+		transform: rotateZ(-45deg);
+	}
+	100%{
+		top: -1000px;
+	}
+}
+
+@keyframes cody-onboard{
+	0%{
+		left: 15%;
+	}
+	100%{
+		left: 25%;
+		opacity: 0;
+	}
+}
+
+@keyframes conversation{
+
+	40%,
+	90%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0
+	}
+}
+
+body{
+	animation: background-move 6s ease-in-out;
+	animation-fill-mode: forwards;
+}
+
+@keyframes move-cody{
+	0%{
+		left: -15%
+	}
+	100%{
+		left: 15%
+	}
+}
+
+@keyframes background-move{
+	0%{
+		background-position: 100px 10%;
+	}
+
+	100%{
+		background-position: -5000px 10%;
+	}
+}
+
+@keyframes rocket-stay-move{
+	50%{
+		transform: translateY(-20px);
+	}
+}
